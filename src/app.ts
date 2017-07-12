@@ -1,7 +1,7 @@
 import {Component, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import * as moment from 'moment/moment';
-import {A2Edatetimepicker} from 'ng2-eonasdan-datetimepicker';
+import {A2Edatetimepicker} from './datetime/datetimepicker.module';
 
 @Component({
   selector: 'app-datetime',
@@ -13,7 +13,7 @@ import {A2Edatetimepicker} from 'ng2-eonasdan-datetimepicker';
           <div class="form-group">
             <div class="input-group">
               <input class="form-control"
-                     a2e-datetimepicker
+                     appA2eDatetimepicker
                      [date]="date"
                      [options]="a2eOptions"
                      (onChange)="dateChange($event)"
@@ -26,7 +26,7 @@ import {A2Edatetimepicker} from 'ng2-eonasdan-datetimepicker';
           <label>Input-group div element:</label>
           <div class="form-group">
             <div class="input-group"
-                 a2e-datetimepicker
+                 appA2eDatetimepicker
                  [date]="date"
                  [options]="a2eOptions"
                  (onChange)="dateChange($event)"
@@ -47,7 +47,7 @@ import {A2Edatetimepicker} from 'ng2-eonasdan-datetimepicker';
     </div>
   `,
 })
-export class App {
+export class AppComponent {
   name: string;
   date: moment.Moment;
   a2eOptions: any;
@@ -80,8 +80,8 @@ export class App {
 
 @NgModule({
   imports: [ BrowserModule, A2Edatetimepicker ],
-  declarations: [ App ],
-  bootstrap: [ App ]
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ]
 })
 
 export class AppModule {}
