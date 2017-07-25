@@ -74,7 +74,7 @@ export class AppComponent {
 
   constructor() {
     this.date = moment();
-    this.a2eOptions = { format: 'DD.MM.YYYY' };
+    this.a2eOptions = { format: 'YYYY/MM/DD HH:mm' };
   }
 }
 
